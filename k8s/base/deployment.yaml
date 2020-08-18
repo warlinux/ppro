@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-ppro
+spec:
+  selector:
+    matchLabels:
+      app: test-ppro
+  template:
+    metadata:
+      labels:
+        app: test-ppro
+    spec:
+      containers:
+      - name: app
+        image: warlinux/ppro:0.0.5
+        env:
+        - name: DB_PORT
+          value: "3306"
+        - name: DB_USER
+          value: "root"
+        - name: DB_HOST
+          value: mysql.default.svc.cluster.local
+        ports:
+        - name: http
+          containerPort: 3000
+          protocol: TCP

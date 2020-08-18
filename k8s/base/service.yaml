@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-ppro
+spec:
+  ports:
+  selector:
+    app: test-ppro
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000

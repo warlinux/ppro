@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-ppro
+spec:
+  template:
+    metadata:
+      labels:
+        app: test-ppro
+    spec:
+      containers:
+        - name: app
+          image: warlinux/ppro:0.0.5
+          env:
+            - name: ENVIRONMENT
+              value: prod
+            - name: DB_DATABASE
+              value: prod
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: test-ppro
+                  key: db-password
