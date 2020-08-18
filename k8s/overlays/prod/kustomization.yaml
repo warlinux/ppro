@@ -5,6 +5,7 @@ namespace: prod
 
 patchesStrategicMerge:
 - custom-env.yaml
+- namespace.yaml
 
 resources:
 - ../../base
