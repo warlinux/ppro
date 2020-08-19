@@ -1,21 +1,16 @@
 #!/bin/bash
 echo ""
 echo ""
-echo "##############################"
-echo "# Creating Argocd deployment #"
-echo "##############################"
+echo "##########################################"
+echo "# Creating infrastrucuture for test-ppro #"
+echo "##########################################"
+k3s kubectl apply -f boostrap/01-mysql-deployment.yaml
 k3s kubectl create ns argocd
 k3s kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-
-sleep 10
-echo ""
-echo ""
-echo "#####################################"
-echo "# Creating infrastructure test-ppro #"
-echo "#####################################"
+sleep 20
 k3s kubectl apply -f boostrap/
 
-sleep 90
+sleep 60
 echo ""
 echo ""
 echo "###################"
