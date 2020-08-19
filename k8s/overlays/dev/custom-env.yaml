@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: warlinux/ppro:0.0.5
+          image: warlinux/ppro:0.0.6
           env:
             - name: ENVIRONMENT
               value: dev
