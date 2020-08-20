@@ -28,11 +28,13 @@ After finishing ./run.sh, you can open the browser using the endpoint for DEV an
 or use command "curl" to validate the result.
 
 Ex:
+```
 ##########################
 # Endpoint test-ppro DEV #
 ##########################
 NAME        ENDPOINTS        AGE
 test-ppro   10.42.0.8:3000   117s
+```
 
 
 ```bash
@@ -43,19 +45,20 @@ curl 10.42.0.8:3000
 
 Open browser with result Endpoint Argocd and password admin showed after finish command ./run.sh
 
-Ex: 
+Ex:
+``` 
 ###################
 # Endpoint Argocd #
 ###################
 NAME            ENDPOINTS                       AGE
 argocd-server   10.42.0.6:8080,10.42.0.6:8080   81s
-
-
+```
+```
 ###########################
 # Password admin - Argocd #
 ###########################
 argocd-server-75877b6ffb-bcf4b
-
+```
 
 
 
