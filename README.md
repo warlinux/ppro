@@ -4,9 +4,10 @@ Project test-ppro
 
 ## Requeriments for running this project in localhost
 
-Do you have a minikube to run this project
+Do you have a minikube or k3s to run this project
 
 https://kubernetes.io/docs/tasks/tools/install-minikube/
+https://k3s.io/
 
 ## Usage
 
