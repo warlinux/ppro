@@ -7,10 +7,11 @@ echo "##########################################"
 kubectl apply -f boostrap/01-mysql-deployment.yaml
 kubectl create ns argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-sleep 20
+sleep 360
+
 kubectl apply -f boostrap/
 
-sleep 60
+sleep 240
 echo ""
 echo ""
 echo "###################"
